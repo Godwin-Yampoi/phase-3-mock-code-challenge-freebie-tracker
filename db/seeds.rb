@@ -17,5 +17,16 @@ puts "Creating freebies..."
 # * and a freebie belongs to a company.                         *
 # ***************************************************************
 # Create freebies Here
+# seeds.rb
+dev1 = Dev.create(name: "John")
+dev2 = Dev.create(name: "Jane")
+
+company1 = Company.create(name: "Company A", founding_year: 2000)
+company2 = Company.create(name: "Company B", founding_year: 2010)
+
+Freebie.create(item_name: "Item 1", value: 100, dev: dev1, company: company1)
+Freebie.create(item_name: "Item 2", value: 200, dev: dev1, company: company2)
+Freebie.create(item_name: "Item 3", value: 150, dev: dev2, company: company1)
+
 
 puts "Seeding done!"
